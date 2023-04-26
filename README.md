@@ -1,12 +1,13 @@
 # Generative Image Inpainting (Tensorflow 2 support)
+## Original version by Jiahui Yu is here: [Generative Image inpainting](https://github.com/JiahuiYu/generative_inpainting)
+
+> **Warning** :
+> I have used this updated code only for testing (or reproducing results).
 
 An open source framework for generative image inpainting task, with the support of [Contextual Attention](https://arxiv.org/abs/1801.07892) (CVPR 2018) and [Gated Convolution](https://arxiv.org/abs/1806.03589) (ICCV 2019 Oral).
 
-## Original version by Jiahui Yu is here: [Generative Image inpainting](https://github.com/JiahuiYu/generative_inpainting)
 
 This is a fork of the original repository with the following changes:
-> **Warning** :
-> I have used only used this updated code only for testing (or reproducing results).
 
 ### Requirements
 * Tensorflow (Install using [Pip](https://www.tensorflow.org/install/pip)).
