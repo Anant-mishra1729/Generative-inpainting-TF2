@@ -17,7 +17,8 @@ An open source framework for generative image inpainting task, with the support 
 * Install tf_slim `pip install tf-slim`.
 * Install yaml `pip install PyYAML`.
 * Instal neuralgym `pip install git+https://github.com/JiahuiYu/neuralgym`.
-  * Go to the directory where neuralgym is stored and run this command
+  
+  Go to the directory **`site-packages`** where all python packages of current python environment are stored and run this command:
     ```sh
     cd .. # Go to previous directory
     tf_upgrade_v2 --intree neuralgym/ --outtree neuralgym/ --reportfile report.txt
