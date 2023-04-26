@@ -1,39 +1,20 @@
-# Generative Image Inpainting
-
-![version](https://img.shields.io/badge/version-v2.0.0-green.svg?style=plastic)
-![pytorch](https://img.shields.io/badge/tensorflow-v1.7.0-green.svg?style=plastic)
-![license](https://img.shields.io/badge/license-CC_BY--NC-green.svg?style=plastic)
+# Generative Image Inpainting (Tensorflow 2 support)
 
 An open source framework for generative image inpainting task, with the support of [Contextual Attention](https://arxiv.org/abs/1801.07892) (CVPR 2018) and [Gated Convolution](https://arxiv.org/abs/1806.03589) (ICCV 2019 Oral).
 
-**For the code of previous version (DeepFill v1), please checkout branch [v1.0.0](https://github.com/JiahuiYu/generative_inpainting/tree/v1.0.0).**
+## Original version by Jiahui Yu is here: [Generative Image inpainting](https://github.com/JiahuiYu/generative_inpainting)
 
-[CVPR 2018 Paper](https://arxiv.org/abs/1801.07892) | [ICCV 2019 Oral Paper](https://arxiv.org/abs/1806.03589) | [Project](http://jiahuiyu.com/deepfill) | [Demo](http://jiahuiyu.com/deepfill) | [YouTube v1](https://youtu.be/xz1ZvcdhgQ0) | [YouTube v2](https://youtu.be/uZkEi9Y2dj4) | [BibTex](#citing)
+This is a fork of the original repository with the following changes:
+> **Warning** :
+> I have used only used this updated code only for testing (or reproducing results).
 
-<img src="https://raw.githubusercontent.com/JiahuiYu/generative_inpainting/v2.0.0/examples/places2/case1_raw.png" width="33%"/> <img src="https://raw.githubusercontent.com/JiahuiYu/generative_inpainting/v2.0.0/examples/places2/case1_input.png" width="33%"/> <img src="https://raw.githubusercontent.com/JiahuiYu/generative_inpainting/v2.0.0/examples/places2/case1_output.png" width="33%"/>
-<img src="https://raw.githubusercontent.com/JiahuiYu/generative_inpainting/v2.0.0/examples/places2/case4_raw.png" width="33%"/> <img src="https://raw.githubusercontent.com/JiahuiYu/generative_inpainting/v2.0.0/examples/places2/case4_input.png" width="33%"/> <img src="https://raw.githubusercontent.com/JiahuiYu/generative_inpainting/v2.0.0/examples/places2/case4_output.png" width="33%"/>
+### Requirements
+* Tensorflow (Install from here [Install with Pip](https://www.tensorflow.org/install/pip).
+* Install openCV `pip install opencv-contrib-python`.
+* Install tf_slim `pip install tf-slim`.
 
-Free-form image inpainting results by our system built on gated convolution. Each triad shows original image, free-form input and our result from left to right.
-
-## Run
-
-0. Requirements:
-    * Install python3.
-    * Install [tensorflow](https://www.tensorflow.org/install/) (tested on Release 1.3.0, 1.4.0, 1.5.0, 1.6.0, 1.7.0).
-    * Install tensorflow toolkit [neuralgym](https://github.com/JiahuiYu/neuralgym) (run `pip install git+https://github.com/JiahuiYu/neuralgym`).
-1. Training:
-    * Prepare training images filelist and shuffle it ([example](https://github.com/JiahuiYu/generative_inpainting/issues/15)).
-    * Modify [inpaint.yml](/inpaint.yml) to set DATA_FLIST, LOG_DIR, IMG_SHAPES and other parameters.
-    * Run `python train.py`.
-2. Resume training:
-    * Modify MODEL_RESTORE flag in [inpaint.yml](/inpaint.yml). E.g., MODEL_RESTORE: 20180115220926508503_places2_model.
-    * Run `python train.py`.
-3. Testing:
-    * Run `python test.py --image examples/input.png --mask examples/mask.png --output examples/output.png --checkpoint model_logs/your_model_dir`.
-4. Still have questions?
-    * If you still have questions (e.g.: How filelist looks like? How to use multi-gpus? How to do batch testing?), please first search over closed issues. If the problem is not solved, please open a new issue.
-
-## Pretrained models
+## For testing
+### Pretrained models
 
 [Places2](https://drive.google.com/drive/folders/1y7Irxm3HSHGvp546hZdAZwuNmhLUVcjO?usp=sharing) | [CelebA-HQ](https://drive.google.com/drive/folders/1uvcDgMer-4hgWlm6_G9xjvEQGP8neW15?usp=sharing)
 
@@ -48,15 +29,6 @@ python test.py --image examples/places2/case1_input.png --mask examples/places2/
 
 **Note:** Please make sure the mask file completely cover the masks in input file. You may check it with saving a new image to visualize `cv2.imwrite('new.png', img - mask)`.
 
-## TensorBoard
-
-Visualization on [TensorBoard](https://www.tensorflow.org/programmers_guide/summaries_and_tensorboard) for training and validation is supported. Run `tensorboard --logdir model_logs --port 6006` to view training progress.
-
-## License
-
-CC 4.0 Attribution-NonCommercial International
-
-The software is for educational and academic research purposes only.
 
 ## Citing
 ```
