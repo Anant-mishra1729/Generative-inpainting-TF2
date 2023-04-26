@@ -20,7 +20,6 @@ An open source framework for generative image inpainting task, with the support 
   
   Go to the directory **`site-packages`** where all python packages of current python environment are stored and run this command:
     ```sh
-    cd .. # Go to previous directory
     tf_upgrade_v2 --intree neuralgym/ --outtree neuralgym/ --reportfile report.txt
     ```
    
