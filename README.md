@@ -10,11 +10,19 @@ An open source framework for generative image inpainting task, with the support 
 * Ubuntu 22.04
 
 
-### Requirements
+### Requirements 
+* Prefer using conda for python environment creation.
 * Tensorflow (Install using [Pip](https://www.tensorflow.org/install/pip)).
 * Install openCV `pip install opencv-contrib-python`.
 * Install tf_slim `pip install tf-slim`.
 * Install yaml `pip install PyYAML`.
+* Instal neuralgym `pip install git+https://github.com/JiahuiYu/neuralgym`.
+  * Go to the directory where neuralgym is stored and run this command
+    ```sh
+    cd .. # Go to previous directory
+    tf_upgrade_v2 --intree neuralgym/ --outtree neuralgym/ --reportfile report.txt
+    ```
+   
 
 ## For testing
 ### Pretrained models
