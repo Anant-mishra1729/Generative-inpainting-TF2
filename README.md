@@ -9,9 +9,10 @@ This is a fork of the original repository with the following changes:
 > I have used only used this updated code only for testing (or reproducing results).
 
 ### Requirements
-* Tensorflow (Install from here [Install with Pip](https://www.tensorflow.org/install/pip).
+* Tensorflow (Install using [Pip](https://www.tensorflow.org/install/pip)).
 * Install openCV `pip install opencv-contrib-python`.
 * Install tf_slim `pip install tf-slim`.
+* Install yaml `pip install PyYAML`.
 
 ## For testing
 ### Pretrained models
