@@ -6,9 +6,6 @@
 
 An open source framework for generative image inpainting task, with the support of [Contextual Attention](https://arxiv.org/abs/1801.07892) (CVPR 2018) and [Gated Convolution](https://arxiv.org/abs/1806.03589) (ICCV 2019 Oral).
 
-
-This is a fork of the original repository with the following changes:
-
 ### Requirements
 * Tensorflow (Install using [Pip](https://www.tensorflow.org/install/pip)).
 * Install openCV `pip install opencv-contrib-python`.
