@@ -11,7 +11,7 @@ An open source framework for generative image inpainting task, with the support 
 
 
 ### Requirements 
-* Prefer using conda for python environment creation.
+> Prefer using conda for python environment creation.
 * Tensorflow (Install using [Pip](https://www.tensorflow.org/install/pip)).
 * Install openCV `pip install opencv-contrib-python`.
 * Install tf_slim `pip install tf-slim`.
